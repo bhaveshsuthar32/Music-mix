@@ -6,7 +6,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
- import logo from "./Kimberly Nguyen.png"
+import logo from "./Kimberly Nguyen.png";
 const Header = () => {
   const [keyword, setKeyWord] = useState("");
   const [res, setRes] = useState([]);
@@ -35,17 +35,16 @@ const Header = () => {
   };
 
   return (
-    <div className="main_header" >
-      
+    <div className="main_header">
       <div className="left">
-        
         <img
           src={logo}
           alt="Your Logo"
           onClick={push}
           style={{ cursor: "pointer" }}
         />
-         <span style={{fontSize:"35px"}}>MusicMix</span>
+
+        <span style={{ fontSize: "35px" }}>Spotify</span>
       </div>
       <div className="right">
         <div className="search_bar">
