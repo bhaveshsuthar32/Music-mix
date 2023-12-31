@@ -12,19 +12,17 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/musixmix/users", userRoutes);
-app.use("/musixmix/songs", songRoutes);
-app.use("/musixmix/playlists", playlistRoutes);
-app.use("/musixmix", searchRoutes);
+app.use("/spotify/users", userRoutes);
+app.use("/spotify/songs", songRoutes);
+app.use("/spotify/playlists", playlistRoutes);
+app.use("/spotify", searchRoutes);
 
 app.get("/", async (req, res) => {
   res.json({
-    msg: "welcome Music Mix backend",
-    Routes: `${"/musixmix/users/" + "\n"} ${"/musixmix/login/" + "\n"} ${
-      "/musixmix/songs/" + "\n"
-    }  ${"/musixmix/playlists/" + "\n"}  ${
-      ("/musixmix/", "for search" + "\n")
-    }`,
+    msg: "welcome Spotify backend",
+    Routes: `${"/spotify/users/" + "\n"} ${"/spotify/login/" + "\n"} ${
+      "/spotify/songs/" + "\n"
+    }  ${"/spotify/playlists/" + "\n"}  ${("/spotify/", "for search" + "\n")}`,
   });
 });
 
